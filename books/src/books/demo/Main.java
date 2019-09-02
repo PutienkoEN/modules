@@ -1,5 +1,6 @@
 package books.demo;
 
+import com.fasterxml.jackson.core.Versioned;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Main
@@ -11,6 +12,7 @@ public class Main
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(modularityBook);
 
+        Versioned versioned = (Versioned) mapper;
         System.out.println(json);
     }
 }
